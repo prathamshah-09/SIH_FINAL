@@ -41,7 +41,7 @@ const Navbar = ({ onLoginClick }) => {
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20 font-size:40px">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a
             href="#home"
@@ -79,7 +79,7 @@ const Navbar = ({ onLoginClick }) => {
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
                 className={cn(
-                  "px-4 py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 text-sm md:text-base lg:text-lg font-medium rounded-xl transition-all duration-300",
+                  "px-4 py-2 text-sm font-medium rounded-xl transition-all duration-300",
                   isScrolled
                     ? "text-foreground/80 hover:text-primary hover:bg-primary/10"
                     : "text-white/85 hover:text-white hover:bg-white/10"

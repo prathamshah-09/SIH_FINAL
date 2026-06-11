@@ -1,78 +1,83 @@
+import { motion } from "framer-motion";
+
 const AboutSection = () => {
   return (
-    <section id="about" className="sensee-section">
-      <div className="sensee-shell">
-        <div className="sensee-header-row">
-          <div>
-            <span className="sensee-badge">
-              <span className="sensee-dot" />
-              About SensEase
-            </span>
+    <section id="about" className="py-28 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-radial-blue opacity-40" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-5">
+            Who We Are
+          </span>
+          <h2 className="section-title">
+            Our Mission
+          </h2>
+        </motion.div>
 
-            <h2 className="sensee-title">
-              <span className="sensee-title-line">Care system for</span>
-              <span className="sensee-title-line"><em>modern campuses</em></span>
-            </h2>
-          </div>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
+          {/* Mission Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex"
+          >
+            <div className="glass-card-hover p-8 lg:p-10 h-full w-full flex flex-col">
+              <h3 className="text-xl font-bold text-foreground mb-6">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                At SensEase, our mission is to help colleges build emotionally resilient campuses 
+                by providing accessible, anonymous, and supportive mental well-being solutions 
+                for every student. We believe that mental health support should be available to 
+                everyone, free from stigma and barriers.
+              </p>
+            </div>
+          </motion.div>
 
-        <div className="sensee-grid-4" style={{ marginBottom: "12px" }}>
-          <article className="sensee-card sensee-stat-card">
-            <span className="sensee-pill-tag">Coverage</span>
-            <strong>24/7</strong>
-            <p className="sensee-card-text">Always available support pathways</p>
-          </article>
-          <article className="sensee-card sensee-stat-card">
-            <span className="sensee-pill-tag">Modules</span>
-            <strong>12</strong>
-            <p className="sensee-card-text">Integrated mental wellness features</p>
-          </article>
-          <article className="sensee-card sensee-stat-card">
-            <span className="sensee-pill-tag">Flow</span>
-            <strong>1</strong>
-            <p className="sensee-card-text">Unified student-to-counselor experience</p>
-          </article>
-          <article className="sensee-card sensee-stat-card">
-            <span className="sensee-pill-tag">Goal</span>
-            <strong>Zero</strong>
-            <p className="sensee-card-text">Stigma around asking for help</p>
-          </article>
-        </div>
+          {/* Vision Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex"
+          >
+            <div className="glass-card-hover p-8 lg:p-10 h-full w-full flex flex-col">
+              <h3 className="text-xl font-bold text-foreground mb-6">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We envision a world where every educational institution is equipped with 
+                the tools and resources to support student mental wellness. A future where 
+                seeking help is normalized, and every mind has the opportunity to thrive.
+              </p>
+            </div>
+          </motion.div>
 
-        <div className="sensee-grid-3">
-          <article className="sensee-card">
-            <span className="sensee-pill-tag">Mission</span>
-            <h3 className="sensee-card-title">Accessible support for every student</h3>
-            <p className="sensee-card-text">
-              SensEase is built to reduce barriers and make emotional care immediate, private, and practical.
-            </p>
-            <div className="sensee-visual sensee-card-persona">
-              <small>Personalized Outcome</small>
-              <p>Each student sees care options that match their current stress level and history.</p>
+          {/* Why SensEase Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="flex"
+          >
+            <div className="glass-card-hover p-8 lg:p-10 h-full w-full flex flex-col">
+              <h3 className="text-xl font-bold text-foreground mb-6">Why SensEase?</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We combine cutting-edge AI technology with evidence-based mental health 
+                practices to create a safe space for students. Our platform bridges the 
+                gap between students who need support and the professional help they deserve.
+              </p>
             </div>
-          </article>
-          <article className="sensee-card">
-            <span className="sensee-pill-tag">Vision</span>
-            <h3 className="sensee-card-title">Resilient campuses by design</h3>
-            <p className="sensee-card-text">
-              Institutions can move from reactive interventions to proactive, data-informed wellbeing systems.
-            </p>
-            <div className="sensee-visual sensee-card-persona">
-              <small>Personalized Outcome</small>
-              <p>Departments receive targeted insights based on their student population profile.</p>
-            </div>
-          </article>
-          <article className="sensee-card">
-            <span className="sensee-pill-tag">Approach</span>
-            <h3 className="sensee-card-title">Human care plus intelligent workflows</h3>
-            <p className="sensee-card-text">
-              Counselors, admins, and students stay synchronized through one platform language.
-            </p>
-            <div className="sensee-visual sensee-card-persona">
-              <small>Personalized Outcome</small>
-              <p>Workflows adapt per role so each user sees only what is relevant and actionable.</p>
-            </div>
-          </article>
+          </motion.div>
         </div>
       </div>
     </section>

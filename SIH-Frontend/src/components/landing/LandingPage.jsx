@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./landing.css";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import FeaturesSection from "./FeaturesSection";
@@ -17,7 +16,7 @@ const LandingPage = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   return (
-    <main className="sensee-landing">
+    <main className="min-h-screen bg-background">
       <Navbar onLoginClick={() => setIsLoginModalOpen(true)} />
       <HeroSection />
       <FeaturesSection />
@@ -27,7 +26,7 @@ const LandingPage = () => {
 
       {/* Login Modal */}
       <Dialog open={isLoginModalOpen} onOpenChange={setIsLoginModalOpen}>
-        <DialogContent className="sm:max-w-md md:max-w-lg p-6 border border-[rgba(99,82,180,0.2)] overflow-hidden bg-white shadow-2xl rounded-none">
+        <DialogContent className="sm:max-w-md md:max-w-lg p-6 border-0 overflow-hidden bg-white shadow-2xl rounded-2xl">
           <DialogTitle className="sr-only">Login</DialogTitle>
           <Login onLoginSuccess={() => setIsLoginModalOpen(false)} isModal={true} />
         </DialogContent>
