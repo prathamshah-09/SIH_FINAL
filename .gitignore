@@ -1,0 +1,15 @@
+# Environment files
+.env
+.env.local
+SIH-Backend/.env
+SIH-Frontend/.env
+
+# Dependencies
+node_modules/
+SIH-Backend/node_modules/
+SIH-Frontend/node_modules/
+
+# Build output
+dist/
+SIH-Frontend/dist/
+SIH-Backend/dist/
